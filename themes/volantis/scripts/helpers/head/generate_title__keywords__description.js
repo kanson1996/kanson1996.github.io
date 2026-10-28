@@ -73,7 +73,7 @@ hexo.extend.helper.register("generate_title", function (config, theme, page) {
   let data = init(hexo, config, theme, page);
   let title = data.title
   let s = ""
-  if (title) {
+  if (title && title !== config.title) {
     s += `${title} - `
   }
   s += `${config.title}`
