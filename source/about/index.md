@@ -9,7 +9,7 @@ date: 2019-07-26 20:35:23
 
 > *Hack the world and make it a better place.*
 
-你好，我是一名程序员，从2017年7月起踏上Java web开发之路。目前在北京从事后端开发工作。对web和移动开发、大数据等都很感兴趣。欢迎与我一起交流、探讨技术人成长路上的酸甜苦辣~~
+你好，我是一名程序员，从2017年7月起踏上Java web开发之路。目前在北京从事后端开发工作。对Web和移动开发、大数据、机器学习等都很感兴趣。欢迎与我一起交流、探讨技术人成长路上的酸甜苦辣~~
 
 
 
@@ -17,8 +17,10 @@ date: 2019-07-26 20:35:23
 
 Find me:
 
-* E-mail: kanson1996@gmail.com
+* E-mail: [kanson1996@gmail.com](mailto:kanson1996@gmail.com)
+* 即刻：[蓝色苍穹](https://okjk.co/ytNOJR)
+* Twitter：[Kanson](https://twitter.com/Kanson43032716)
+* 豆瓣：[火星之冰](https://www.douban.com/people/138970225/)
 * 微博：[kanson乐园](https://weibo.com/kanson1996)
 * 知乎：[Kanson](https://www.zhihu.com/people/kanson-wang)
-* 豆瓣：[火星之冰](https://www.douban.com/people/138970225/)
 * 微信公众号：嗨拾光(pano-time)

@@ -1,0 +1,57 @@
+<script>
+  (function () {
+    function updateCopyrightYear() {
+      var el = document.getElementById('copyright-year');
+      if (el) el.textContent = new Date().getFullYear();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateCopyrightYear);
+    } else {
+      updateCopyrightYear();
+    }
+    document.addEventListener('pjax:complete', updateCopyrightYear);
+
+    // If the counter service is unreachable, stop the loading spinners after 8s.
+    setTimeout(function () {
+      ['site_pv', 'site_uv', 'page_pv'].forEach(function (key) {
+        document.querySelectorAll('[id="busuanzi_' + key + '"]').forEach(function (el) {
+          if (el.querySelector('.fa-spin')) el.textContent = '—';
+        });
+      });
+    }, 8000);
+
+    // Volantis 6.8.3 only preloads the search module when the header/cover
+    // search box gets focus; it never opens the modal. Wire it up.
+    async function openSearch(value) {
+      try {
+        if (typeof loadSearchService === 'function') loadSearchService();
+        for (var i = 0; i < 50 && typeof SearchService === 'undefined'; i++) {
+          await new Promise(function (resolve) { setTimeout(resolve, 100); });
+        }
+        if (typeof SearchService !== 'undefined') {
+          SearchService.setQueryText(value || '');
+          SearchService.search();
+        }
+      } catch (err) {
+        console.warn('Volantis search failed:', err);
+      }
+    }
+
+    document.addEventListener('focusin', function (e) {
+      var el = e.target;
+      if (el && el.matches && el.matches('.input.u-search-input')) {
+        var value = el.value || '';
+        el.blur();
+        openSearch(value);
+      }
+    }, true);
+
+    document.addEventListener('submit', function (e) {
+      if (e.target && e.target.matches && e.target.matches('.u-search-form')) {
+        e.preventDefault();
+        var input = e.target.querySelector('.input.u-search-input');
+        openSearch(input ? input.value : '');
+      }
+    }, true);
+  })();
+</script>

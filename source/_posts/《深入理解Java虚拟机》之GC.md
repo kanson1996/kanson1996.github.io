@@ -1,7 +1,9 @@
 ---
 title: 《深入理解Java虚拟机》之GC
-date: 2019‎-12-05 13:55:01
-tags: Java, JVM
+date: 2019-12-05 13:55:01
+tags:
+  - Java
+  - JVM
 
 ---
 

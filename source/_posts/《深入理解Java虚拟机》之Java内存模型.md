@@ -1,7 +1,9 @@
 ---
 title: 《深入理解Java虚拟机》之Java内存模型
-date: 2019‎-12-03 20‎:18:01
-tags: Java, JVM
+date: 2019-12-03 20:18:01
+tags:
+  - Java
+  - JVM
 ---
 
 ### 一、内存模型
